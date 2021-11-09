@@ -4,13 +4,7 @@ const tsSyntaxKind = require("./tsSyntaxKind");
 
 function extract(sourceFile) {
   const result = {};
-  const output = (...args) => {
-    const [line, character, len, ...rest] = args;
-    result.push(
-      "L " + (line + 1) + ", col " + (character + 1) + ", len " + len + "  " + rest.join("").replace(/\n/g, " ")
-    );
-  };
-
+  
   analyseNode(sourceFile, 0, result);
 
   function analyseNode(node, deep, result) {
