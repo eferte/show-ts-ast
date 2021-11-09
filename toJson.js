@@ -49,7 +49,7 @@ const extractTestParameters = (fileName) => {
   );
 
   const result = extract(sourceFile);
-  writeFileSync(fileName + ".json", JSON.stringify(result, null, 3), "utf-8");
+  writeFileSync(fileName + ".json", JSON.stringify(result, null, 2), "utf-8");
 };
 
 extractTestParameters(process.argv[process.argv.length - 1]);
