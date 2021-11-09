@@ -2,6 +2,6 @@
 
 # run
 
-node index myScriptFile.ts
+node index sample.ts
 
-node toJson myScriptFile.ts
+node toJson sample.ts
